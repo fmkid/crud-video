@@ -11,7 +11,7 @@ const app = express();
 
 // Conexión base de datos
 const mongoose = require('mongoose');
-const uri = 'mongodb://localhost:27017/myapp';
+const uri = 'mongodb://localhost:27017/myac';
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 // Or using promises
 mongoose.connect(uri, options).then(
@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Rutas
-app.use('/api', require('./routes/nota'));
+app.use('/api', require('./routes/mascota'));
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');
